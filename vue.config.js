@@ -1,4 +1,4 @@
-'use strict'
+'use strict'//仅且仅能放在代码编写的最前面,必须按照严格的js格式来写
 const path = require('path')
 const defaultSettings = require('./src/settings.js')
 

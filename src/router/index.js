@@ -32,6 +32,9 @@ import Layout from '@/layout'
  */
 export const constantRoutes = [
   {
+    /**
+     * hidden：不显示这个面包屑的部分
+     */
     path: '/login',
     component: () => import('@/views/login/index'),
     hidden: true
@@ -51,19 +54,21 @@ export const constantRoutes = [
       path: 'dashboard',
       name: 'Dashboard',
       component: () => import('@/views/dashboard/index'),
-      meta: { title: 'Dashboard', icon: 'dashboard' }
+      meta: { title: 'Dashboard', icon: 'dashboard' }//icon就是对应svg图的文件名
     }]
   },
-
+/**
+ * 父组件的path,redirect,chilrden的path要对应
+ */
   {
     path: '/example',
     component: Layout,
     redirect: '/example/table',
     name: 'Example',
-    meta: { title: 'Example', icon: 'el-icon-s-help' },
+    meta: { title: 'Example', icon: 'el-icon-s-help' },//el自带的图案
     children: [
       {
-        path: 'table',
+        path: 'table',//不用在前面加/
         name: 'Table',
         component: () => import('@/views/table/index'),
         meta: { title: 'Table', icon: 'table' }

@@ -1,7 +1,17 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: fmy1993
+ * @Date: 2021-09-20 21:43:30
+ * @LastEditors: fmy1993
+ * @LastEditTime: 2021-09-21 16:46:53
+-->
 <template>
   <div class="app-container">
+          <!-- 直接传入一个数组 -->
     <el-table
       v-loading="listLoading"
+
       :data="list"
       element-loading-text="Loading"
       border
