@@ -12,10 +12,15 @@ const title = defaultSettings.title || 'Vue Admin Template'
 /**
  * 
  * @param {*} pageTitle 传入参数，拼成pagetitle-title，eg:table-Vue Admin Template
- * @returns 
+ * // ${pageTitle} 在字符串内方便的传入变量的值
+ * @returns 返回页面-标题
  */
 export default function getPageTitle(pageTitle) {
   // 如果有就返回
+//   var my_name = 'John';
+// var s = `hello ${my_name}, how are you doing`;
+// console.log(s); // prints hello John, how are you doing
+
   if (pageTitle) {
     return `${pageTitle} - ${title}`
   }
